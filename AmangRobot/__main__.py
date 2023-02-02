@@ -111,7 +111,7 @@ buttons = [
     [
        InlineKeyboardButton(
            text=f"About {dispatcher.bot.first_name}", callback_data="amang_"),
-       InlineKeyboardButton=(text="☕️ Donate", url=f"https://t.me/{DONET}"),
+       InlineKeyboardButton(text="☕️ Donate", url=f"https://t.me/{DONET}"),
     ],
 ]
 
