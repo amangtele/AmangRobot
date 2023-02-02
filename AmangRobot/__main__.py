@@ -99,17 +99,11 @@ buttons = [
         InlineKeyboardButton(text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
     ],
     [
-        InlineKeyboardButton(text="❓Get Help", callback_data="help_back"),
-        InlineKeyboardButton(text="📣 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="❓Help Manage", callback_data="help_back"),
+        InlineKeyboardButton(text=f"❓ Help Music", callback_data="amang_"),
     ],
     [
-        InlineKeyboardButton(
-            text="Try inline!​​", switch_inline_query_current_chat=""
-        ),
-    ],
-    [
-       InlineKeyboardButton(
-           text=f"About {dispatcher.bot.first_name}", callback_data="amang_"),
+       InlineKeyboardButton(text="📣 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
        InlineKeyboardButton(text="☕️ Donate", url=f"https://t.me/amwangstore/52"),
     ],
 ]
@@ -368,13 +362,15 @@ def amang_about_callback(update, context):
     query = update.callback_query
     if query.data == "amang_":
         query.message.edit_text(
-            text=f"๏ I'm *{dispatcher.bot.first_name}*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
+            text=f"๏ ⌨️ Perintah Tersedia:"
+            "\n👮🏻‍♀️ Hanya Admin."
+            "\n👩🏻‍💼 Dapat diakses oleh semua orang."
+            "\n\n👩🏻 » /play - Dengan link atau judul lagu."
+            "\n👮🏻‍♀️ » /pause - Menjeda trek saat ini sedang diputar."
+            "\n👮🏻‍♀️ » /resume - Memutar trek yang dijeda sebelumnya."
+            "\n👮🏻‍♀️ » /end - Menghentikan pemutaran trek dan menghapus antrean."
+            "\n👮🏻‍♀️ » /skip - Pergi ke trek berikutnya."
+            "\n👮🏻‍♀️ » /lang - Setel bahasa bot."
             f"\n\n_{dispatcher.bot.first_name}'s licensed under the GNU General Public License v3.0_"
             f"\n\n Click on button bellow to get basic help for {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
