@@ -20,6 +20,7 @@ from AmangRobot import (
     OWNER_ID,
     PORT,
     SUPPORT_CHAT,
+    DONET,
     TOKEN,
     URL,
     WEBHOOK,
@@ -100,7 +101,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="❓Get Help", callback_data="help_back"),
-        InlineKeyboardButton=(text="📣 Support", url=f"t.me/amangsupportgrup"),
+        InlineKeyboardButton(text="📣 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         InlineKeyboardButton(
@@ -110,7 +111,8 @@ buttons = [
     [
        InlineKeyboardButton(
            text=f"About {dispatcher.bot.first_name}", callback_data="amang_"),
-       InlineKeyboardButton=(text="☕️ Donate", url=f"t.me/amwangstore/52"),
+       InlineKeyboardButton=(text="☕️ Donate", url=f"https://t.me/{DONET}"),
+    ],
 ]
 
 
@@ -792,7 +794,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Hi, i'm alive.",
+                "👋 MANAGE HIDUP.",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
