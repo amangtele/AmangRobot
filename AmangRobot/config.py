@@ -20,6 +20,7 @@ class Config(object):
     OWNER_USERNAME = "amwang"
     BOT_USERNAME = "AmangRobot_bot"
     SUPPORT_CHAT = "amangsupportgrup"  # Your own group for support, do not add the @
+    DONET = "amwangstore/52"
     JOIN_LOGGER = (
         -1001284445583
     )  # Prints any new group the bot is added to, prints just the name and ID.
