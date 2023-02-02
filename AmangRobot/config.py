@@ -17,16 +17,16 @@ class Config(object):
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     OWNER_ID = 1606221784  # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OPENWEATHERMAP_ID = 22322
-    OWNER_USERNAME = "Scotchers"
-    BOT_USERNAME = "EmiexRobot"
-    SUPPORT_CHAT = "FumikaSupportGroup"  # Your own group for support, do not add the @
+    OWNER_USERNAME = "amwang"
+    BOT_USERNAME = "AmangRobot_bot"
+    SUPPORT_CHAT = "amangsupportgrup"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001748076180
+        -1001284445583
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001748076180
+        -1001284445583
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
-    ERROR_LOG = -1001657496255
+    ERROR_LOG = -1001284445583
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
@@ -83,7 +83,7 @@ class Config(object):
     SESSION_STRING = "12342"
     STRING_SESSION = "kontol"
     MONGO_PORT = 27017
-    MONGO_DB = "Emiko"
+    MONGO_DB = "Amang"
 
 class Production(Config):
     LOGGER = True
