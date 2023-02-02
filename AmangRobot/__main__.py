@@ -20,7 +20,6 @@ from AmangRobot import (
     OWNER_ID,
     PORT,
     SUPPORT_CHAT,
-    DONET,
     TOKEN,
     URL,
     WEBHOOK,
@@ -101,7 +100,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="❓Get Help", callback_data="help_back"),
-        InlineKeyboardButton(text="📣 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="📣 Support", url=f"https://t.me/amwangstore/52"),
     ],
     [
         InlineKeyboardButton(
