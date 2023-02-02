@@ -100,7 +100,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="❓Get Help", callback_data="help_back"),
-        InlineKeyboardButton=(text="📣 Support", url=f"t.me/amangsupportgrup"),
+        InlineKeyboardButton(text="📣 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
         InlineKeyboardButton(
@@ -793,7 +793,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Hi, i'm alive.",
+                "👋 MANAGE HIDUP.",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
