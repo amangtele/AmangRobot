@@ -96,10 +96,11 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        [ InlineKeyboardButton(text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+        InlineKeyboardButton(text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
     ],
     [
         InlineKeyboardButton(text="❓Get Help", callback_data="help_back"),
+        InlineKeyboardButton=(text="📣 Support", url=f"t.me/amangsupportgrup"),
     ],
     [
         InlineKeyboardButton(
@@ -109,8 +110,7 @@ buttons = [
     [
        InlineKeyboardButton(
            text=f"About {dispatcher.bot.first_name}", callback_data="amang_"),
-        InlineKeyboardButton=(text="📣 Support", url=f"t.me/amangsupportgrup"),
-    ],
+       InlineKeyboardButton=(text="☕️ Donate", url=f"t.me/amwangstore/52"),
 ]
 
 
