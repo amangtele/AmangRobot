@@ -20,7 +20,6 @@ from AmangRobot import (
     OWNER_ID,
     PORT,
     SUPPORT_CHAT,
-    DONET,
     TOKEN,
     URL,
     WEBHOOK,
@@ -111,7 +110,7 @@ buttons = [
     [
        InlineKeyboardButton(
            text=f"About {dispatcher.bot.first_name}", callback_data="amang_"),
-       InlineKeyboardButton=(text="☕️ Donate", url=f"https://t.me/{DONET}"),
+       InlineKeyboardButton=(text="☕️ Donate", url=f"https://t.me/amwangstore/52"),
     ],
 ]
 
