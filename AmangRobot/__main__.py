@@ -408,7 +408,7 @@ def amang_about_callback(update, context):
             "\n/shuffle atau /cshuffle- Secara acak mengacak daftar putar yang antri."
             "\n/seek atau /cseek - Teruskan Cari musik sesuai durasi Anda."
             "\n/seekback atau /cseekback - Mundur Mencari musik sesuai durasi Anda."
-            "\n/restart - Mulai ulang bot untuk obrolan Anda ."
+            "\n/restart - Mulai ulang bot untuk obrolan Anda .",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
