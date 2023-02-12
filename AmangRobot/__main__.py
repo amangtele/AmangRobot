@@ -379,7 +379,7 @@ def amang_about_callback(update, context):
                     InlineKeyboardButton(text="Extra Command", callback_data="amang_extra"),
                  ],
                  [
-                    InlineKeyboardButton(text="Credits", callback_data="amang_credit),
+                    InlineKeyboardButton(text="Credits", callback_data="amang_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="source_back"),
