@@ -362,31 +362,24 @@ def amang_about_callback(update, context):
     query = update.callback_query
     if query.data == "amang_":
         query.message.edit_text(
-            text=f"๏ ⌨️ Perintah Tersedia:"
-            "\n👮🏻‍♀️ Hanya Admin."
-            "\n👩🏻‍💼 Dapat diakses oleh semua orang."
-            "\n\n👩🏻 » /play - Dengan link atau judul lagu."
-            "\n👮🏻‍♀️ » /pause - Menjeda trek saat ini sedang diputar."
-            "\n👮🏻‍♀️ » /resume - Memutar trek yang dijeda sebelumnya."
-            "\n👮🏻‍♀️ » /end - Menghentikan pemutaran trek dan menghapus antrean."
-            "\n👮🏻‍♀️ » /skip - Pergi ke trek berikutnya."
-            "\n👮🏻‍♀️ » /lang - Setel bahasa bot."
-            f"\n\n_{dispatcher.bot.first_name}'s licensed under the GNU General Public License v3.0_"
+            text=f"Amang Robot Has Music and Stream features 🎥"
+            f"\n\nYou can listen to music from platforms Youtube, Spotify, Resso etc."
+            f"\nClick the Button below if you don't understand about this feature."
             f"\n\n Click on button bellow to get basic help for {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="amang_admin"),
+                    InlineKeyboardButton(text="Admins Command", callback_data="amang_admin"),
                     InlineKeyboardButton(text="Bot Command", callback_data="amang_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="amang_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="amang_credit"),
+                    InlineKeyboardButton(text="Play Command", callback_data="source_"),
+                    InlineKeyboardButton(text="Extra Command", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/amangtele/AmangRobot"),
+                    InlineKeyboardButton(text="Credits", callback_data="amang_credit),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="source_back"),
@@ -424,6 +417,20 @@ def amang_about_callback(update, context):
             f"\nx /lyrics [Music Name] - Mencari Lirik untuk Musik tertentu di web."
             f"\nx /song [Track Name] or [YT Link] - Unduh lagu apa pun dari youtube dalam format mp3 atau mp4."
             f"\n /player -  Dapatkan Panel Bermain interaktif.",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Go Back", callback_data="amang_")]]
+            ),
+        )
+                     
+    elif query.data == "amang_extra":
+        query.message.edit_text(
+            text=f"<b>✅Extra Command:</b>"
+            f"\n\n /start - Mulai Bot Musik."
+            f"\n /ping- Ping Bot dan periksa statistik Ram, Cpu, dll dari Bot."
+            f"\n\n ✅Group Settings:"
+            f"\n /settings - Dapatkan pengaturan grup lengkap dengan tombol sebaris"
+            f"\n /help - Dapatkan Menu Helper Perintah dengan penjelasan rinci tentang perintah.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="amang_")]]
@@ -479,17 +486,16 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
-            "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/end` - For end the playback."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
-            "\n\n๏ Command for all members."
-            "\n • `/play` <query /reply audio> - Playing music via YouTube."
-            "\n • `/playlist` - To playing a playlist of groups or your personal playlist",
+            text=" ✅Play Commands:"
+            "\n\n cplay or cstream stands for channel play."
+            "\n vplay stands for video play."
+            "\n /play or /vplay or /cplay  - Bot will start playing your given query on voice chat."
+            "\n /stream or /cstream - Stream live links on voice chats."
+            "\n /channelplay Chat username or id or Disable - Connect channel to a group and stream music on channel's voice chat from your group."
+            "\n\n ✅Bot's Server Playlists:"
+            "\n /playlist  - Periksa Daftar Putar Tersimpan Anda Di Server."
+            "\n /deleteplaylist - Hapus semua musik yang disimpan di daftar putar Anda"
+            "\n /play  - Mulai mainkan Daftar Putar Tersimpan Anda dari Server.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
