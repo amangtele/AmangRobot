@@ -376,7 +376,7 @@ def amang_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Play Command", callback_data="source_"),
-                    InlineKeyboardButton(text="Extra Command", callback_data="source_"),
+                    InlineKeyboardButton(text="Extra Command", callback_data="amang_extra"),
                  ],
                  [
                     InlineKeyboardButton(text="Credits", callback_data="amang_credit),
