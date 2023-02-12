@@ -83,9 +83,9 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-👋🏻 Hello, I'm AmangRobot.
+👋🏻 Hello, {dispatcher.bot.first_name}.
 
-❍ AmangRobot is a bot manager + music to manage your group well.
+❍ {dispatcher.bot.first_name} is a bot manager + music to manage your group well.
 ❍ Press /help for Help.
 ❍ Maintaned By @amwang.
 ────────────────────────
