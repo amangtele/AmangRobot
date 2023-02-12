@@ -37,6 +37,16 @@ async def _(hilih):
         await hilih.reply("Something went wrong LOL...")
 
 
+@register(pattern="^/asupan ?(.*)")
+async def asupan(event):
+    try:
+        resp = requests.get("https://t.me/kacafilmid").json()
+        asupannya = f"{resp['url']}"
+        return await tbot.send_file(event.chat_id, asupannya)
+    except Exception:
+        await event.reply("`Error 404 not found...`")        
+        
+        
 # Copyright 2021 ©
 # Modul Create by https://t.me/xflicks | Github = https://github.com/FeriEXP
 # Yang remove cacat
